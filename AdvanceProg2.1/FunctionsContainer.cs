@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdvanceProg2._1
+namespace Excercise_1
 {
     class FunctionsContainer
     {
