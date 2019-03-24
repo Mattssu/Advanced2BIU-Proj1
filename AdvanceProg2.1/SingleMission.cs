@@ -10,15 +10,8 @@ namespace AdvanceProg2._1
     {
         //members
         private Func<double, double> func;
-        private string name;
         //properties
-        public String Name
-        {
-            get
-            {
-                return name;
-            }
-        }
+        public String Name { get; }
         public String Type
         {
             get
@@ -30,7 +23,7 @@ namespace AdvanceProg2._1
         public SingleMission(Func<double,double> func,string name)
         {
             this.func = func;
-            this.name = name;
+            this.Name = name;
         }
         //methods
         public double Calculate(double value)

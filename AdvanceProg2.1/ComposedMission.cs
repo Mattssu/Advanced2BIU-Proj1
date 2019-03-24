@@ -10,15 +10,8 @@ namespace AdvanceProg2._1
     {
         //members
         private List<Func<double, double>> funcList;
-        private string name;
         //properties
-        public String Name
-        {
-            get
-            {
-                return name;
-            }
-        }
+        public String Name { get; }
         public String Type
         {
             get
@@ -29,7 +22,7 @@ namespace AdvanceProg2._1
         //constructor
         public ComposedMission(string name)
         {
-            this.name = name;
+            this.Name = name;
         }
         public ComposedMission Add(Func<double, double> func)
         {
