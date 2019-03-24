@@ -9,7 +9,7 @@ namespace Excercise_1
     public class SingleMission : IMission
     {
         //members
-        private Func<double, double> func;
+        private delegateFunc func;
         //properties
         public String Name { get; }
         public String Type
@@ -20,7 +20,7 @@ namespace Excercise_1
             }
         }
         //constructor
-        public SingleMission(Func<double,double> func,string name)
+        public SingleMission(delegateFunc func,string name)
         {
             this.func = func;
             this.Name = name;

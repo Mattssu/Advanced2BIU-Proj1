@@ -5,19 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Excercise_1
-{
+{ 
+    public delegate double delegateFunc(double num);
     class FunctionsContainer
     {
         //A function that returns intself
-        private readonly Func<double, double> defaultFunc = val => val;
+        private readonly delegateFunc defaultFunc = val => val;
         //A dictionary struct
-        private Dictionary<string, Func<double, double>> funcDict = new Dictionary<string, Func<double, double>>();
+        private Dictionary<string, delegateFunc> funcDict = new Dictionary<string, delegateFunc>();
         //Indexer
-        public Func<double,double> this[string funcKey]
+        public delegateFunc this[string funcKey]
         {
             get
             {
-                Func<double, double> func;
+                delegateFunc func;
                 if (funcDict.TryGetValue(funcKey, out func))
                 {
                     return func;

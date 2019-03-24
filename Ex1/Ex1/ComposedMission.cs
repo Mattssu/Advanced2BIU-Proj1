@@ -9,7 +9,7 @@ namespace Excercise_1
     public class ComposedMission : IMission
     {
         //members
-        private List<Func<double, double>> funcList = new List<Func<double, double>>();
+        private List<delegateFunc> funcList = new List<delegateFunc>();
         //properties
         public String Name { get; }
         public String Type
@@ -24,7 +24,7 @@ namespace Excercise_1
         {
             this.Name = name;
         }
-        public ComposedMission Add(Func<double, double> func)
+        public ComposedMission Add(delegateFunc func)
         {
             funcList.Add(func);
             return this;
