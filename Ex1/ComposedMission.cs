@@ -9,7 +9,7 @@ namespace Excercise_1
     public class ComposedMission : IMission
     {
         //members
-        private List<Func<double, double>> funcList;
+        private List<Func<double, double>> funcList = new List<Func<double, double>>();
         //properties
         public String Name { get; }
         public String Type
